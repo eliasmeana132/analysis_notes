@@ -11,7 +11,7 @@
   },
   {
     "type": "Lemma 3.2.1",
-    "concept": "Let $(R,\\Sigma,\\mu)$ be a $\\sigma$-finite measure space. Let $f:R\\to\\mathbb{C}$ be measureable and $\\phi:[0,\\infty)\\to[0,\\infty)$ differentiable and increasing with $\\phi(0)=0$. Then what is $\\int_R\\phi\\left(|f(x)|\\right)d\\mu(x)",
+    "concept": "Let $(R,\\Sigma,\\mu)$ be a $\\sigma$-finite measure space. Let $f:R\\to\\mathbb{C}$ be measureable and $\\phi:[0,\\infty)\\to[0,\\infty)$ differentiable and increasing with $\\phi(0)=0$. Then what is $\\int_R\\phi\\left(|f(x)|\\right)d\\mu(x)$",
     "content": "\\int_0^\\infty\\phi'(\\lambda)\\mu(\\left\\{x\\in R : |f(x)|>\\lambda\\right\\})d\\lambda"
   }
 ]
