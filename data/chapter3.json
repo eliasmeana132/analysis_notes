@@ -1,0 +1,7 @@
+[
+  {
+    "type": "Definition 1.1.1",
+    "concept": "The unit circle $\\mathbb{T}$",
+    "content": "$\\mathbb{T} = \\{z \\in \\mathbb{C} : |z| = 1\\}$. It is a compact metric space with the topology induced by $\\mathbb{C}$. It is a multiplicative group with unit $e=1$ and $z^{-1} = \\overline{z}$. It can be identified with the quotient group $\\mathbb{R}/2\\pi\\mathbb{Z} = [-\\pi, \\pi)$."
+  }
+]
