@@ -1,17 +1,282 @@
 [
   {
     "type": "Theorem 3.1.1",
-    "concept": "What is the dual of $L^1(\\mathbb{T})$ and what is it's norm?",
-    "content": "$L^\\infty(\\mathbb{T})$ and the norms are the same"
+    "concept": "What is the dual of $L^1(\\mathbb{T})$ and what is its norm?",
+    "content": "$(L^1(\\mathbb{T}))^* = L^\\infty(\\mathbb{T})$ with the same norm"
   },
   {
     "type": "Theorem 3.1.2",
-    "concept": "What is the dual of $L^p(\\mathbb{T})$ for $1<p<\\infty$ and what is it's norm?",
-    "content": "$L^{p^\\prime}(\\mathbb{T})$ where $\\frac{1}{p}+\\frac{1}{p^\\prime}=1$ and the norms are the same"
+    "concept": "What is the dual of $L^p(\\mathbb{T})$ for $1 < p < \\infty$ and what is its norm?",
+    "content": "$(L^p(\\mathbb{T}))^* = L^{p'}(\\mathbb{T})$ where $\\frac{1}{p} + \\frac{1}{p'} = 1$, with the same norm"
   },
   {
     "type": "Lemma 3.2.1",
-    "concept": "Let $(R,\\Sigma,\\mu)$ be a $\\sigma$-finite measure space. Let $f:R\\to\\mathbb{C}$ be measureable and $\\phi:[0,\\infty)\\to[0,\\infty)$ differentiable and increasing with $\\phi(0)=0$. Then what is $\\int_R\\phi\\left(|f(x)|\\right)d\\mu(x)$",
-    "content": "$\\int_0^\\infty\\phi'(\\lambda)\\mu(\\left\\{x\\in R : |f(x)|>\\lambda\\right\\})d\\lambda$"
+    "concept": "Let $(R,\\Sigma,\\mu)$ be a $\\sigma$-finite measure space. Let $f:R\\to\\mathbb{C}$ be measurable and $\\phi:[0,\\infty)\\to[0,\\infty)$ differentiable and increasing with $\\phi(0)=0$. Then what is $\\int_R\\phi\\left(|f(x)|\\right)d\\mu(x)$?",
+    "content": "$\\int_0^\\infty\\phi'(\\lambda)\\mu(\\{x\\in R : |f(x)|>\\lambda\\})d\\lambda$"
+  },
+  {
+    "type": "Definition 3.2.2",
+    "concept": "What is $L^{p,\\infty}(R,\\mu)$ and how is its quasi-norm defined?",
+    "content": "$L^{p,\\infty}(R,\\mu) = \\{f \\text{ measurable} : \\|f\\|_{p,\\infty} = \\sup_{\\lambda>0}\\lambda\\,\\mu(\\{x : |f(x)|>\\lambda\\})^{1/p} < \\infty\\}$. This is the weak $L^p$ space."
+  },
+  {
+    "type": "Proposition 3.2.3",
+    "concept": "Is $L^{p,\\infty}(R,\\mu)$ a vector space and is $\\|\\cdot\\|_{p,\\infty}$ a norm?",
+    "content": "$L^{p,\\infty}(R,\\mu)$ is a vector space and $\\|\\cdot\\|_{p,\\infty}$ is a quasi-norm (not a norm in general). It satisfies $\\|\\alpha f\\|_{p,\\infty} = |\\alpha|\\|f\\|_{p,\\infty}$, $\\|f\\|_{p,\\infty}=0 \\iff f=0$ a.e., and $\\|f+g\\|_{p,\\infty}\\le C(\\|f\\|_{p,\\infty}+\\|g\\|_{p,\\infty})$ for some $C>0$."
+  },
+  {
+    "type": "Proposition 3.2.4",
+    "concept": "What is the relationship between $L^p$ and $L^{p,\\infty}$, and how do their norms compare?",
+    "content": "$L^p(R,\\mu) \\subset L^{p,\\infty}(R,\\mu)$ and $\\|f\\|_{p,\\infty} \\le \\|f\\|_p$ for all $f\\in L^p(R,\\mu)$. This follows from Chebyshev's inequality: $\\mu(\\{|f|>\\lambda\\})\\le \\frac{1}{\\lambda^p}\\int|f|^p d\\mu$."
+  },
+  {
+    "type": "Definition 3.2.5",
+    "concept": "What does it mean for a sublinear operator $T$ to be of type $(p,q)$-strong and type $(p,q)$-weak?",
+    "content": "A sublinear operator $T$ is of type $(p,q)$-strong if $\\exists C>0$ such that $\\|Tf\\|_q\\le C\\|f\\|_p$ for all $f\\in S(R,\\mu)$. It is of type $(p,q)$-weak if $\\exists C>0$ such that $\\nu(\\{|Tf|>\\lambda\\})\\le \\frac{C^q\\|f\\|_p^q}{\\lambda^q}$ for all $f\\in S(R,\\mu)$, $\\lambda>0$."
+  },
+  {
+    "type": "Note 3.2.6",
+    "concept": "If an operator is of strong type $(p,q)$, is it also of weak type $(p,q)$?",
+    "content": "Yes. If $T$ is of type $(p,q)$-strong then it is also of type $(p,q)$-weak. This follows from Chebyshev's inequality."
+  },
+  {
+    "type": "Theorem 3.2.7",
+    "concept": "What does the maximal operator theorem say about the set of functions where $\\lim_{t\\to 0} T_t f = f$ a.e.?",
+    "content": "If $T^*f = \\sup_{t>0}|T_t f|$ is of weak type $(p,q)$ for some $0<p,q<\\infty$, then: (i) $A = \\{f\\in L^p : \\lim_{t\\to0} T_t f = f \\text{ a.e.}\\}$ is closed in $L^p$, and (ii) $B = \\{f\\in L^p : \\exists \\lim_{t\\to0} T_t f \\text{ a.e.}\\}$ is closed in $L^p$."
+  },
+  {
+    "type": "Theorem 3.2.8",
+    "concept": "What is the Marcinkiewicz interpolation theorem (first version) for an operator that is $(p_0,p_0)$-weak and $(\\infty,\\infty)$-strong?",
+    "content": "If $T$ is sublinear, of type $(p_0,p_0)$-weak with norm $\\le A_0$ and $\\|Tf\\|_\\infty\\le A_1\\|f\\|_\\infty$, then $T$ is of type $(p,p)$-strong for all $p_0<p<\\infty$ with $\\|T\\|_{L^p\\to L^p}\\le C A_0^{1-\\theta}A_1^\\theta$ where $\\theta=\\frac{p-p_0}{p}$."
+  },
+  {
+    "type": "Theorem 3.2.9",
+    "concept": "What is the Marcinkiewicz interpolation theorem (second version) for an operator that is $(p_0,p_0)$-weak and $(p_1,p_1)$-weak?",
+    "content": "If $T$ is sublinear, of type $(p_0,p_0)$-weak with norm $\\le A_0$ and $(p_1,p_1)$-weak with norm $\\le A_1$ ($0<p_0<p_1<\\infty$), then $T$ is of type $(p,p)$-strong for all $p_0<p<p_1$ with $\\|T\\|_{L^p\\to L^p}\\le C A_0^{1-\\theta}A_1^\\theta$ where $\\frac{1}{p}=\\frac{1-\\theta}{p_0}+\\frac{\\theta}{p_1}$."
+  },
+  {
+    "type": "Theorem 3.3.1",
+    "concept": "What is the Riesz-Thorin interpolation theorem for a positive kernel operator $Tf(y)=\\int A(x,y)f(x)d\\mu(x)$ with $A(x,y)\\ge 0$?",
+    "content": "If $T$ is $(p_0,q_0)$-strong with norm $\\le M_0$ and $(p_1,q_1)$-strong with norm $\\le M_1$, then $T$ is $(p,q)$-strong with $\\|T\\|_{L^p\\to L^q}\\le M_0^{1-\\theta}M_1^\\theta$ where $\\frac{1}{p}=\\frac{1-\\theta}{p_0}+\\frac{\\theta}{p_1}$ and $\\frac{1}{q}=\\frac{1-\\theta}{q_0}+\\frac{\\theta}{q_1}$, for $0<\\theta<1$."
+  },
+  {
+    "type": "Lemma 3.3.3",
+    "concept": "For a matrix $A=(a_{i,j})$ and $M(\\alpha,\\beta)=\\|A\\|_{\\ell^p\\to\\ell^q}$ with $(\\alpha,\\beta)=(1/p,1/q)$, what convexity property does $\\log M(\\alpha,\\beta)$ have on $\\Delta=\\{(\\alpha,\\beta)\\in[0,1]^2:\\alpha\\ge\\beta\\}$?",
+    "content": "$\\log M(\\alpha,\\beta)$ is logarithmically convex on $\\Delta$, i.e., $M(\\alpha,\\beta)\\le M(\\alpha_0,\\beta_0)^{1-\\theta}M(\\alpha_1,\\beta_1)^\\theta$ when $(\\alpha,\\beta)=(1-\\theta)(\\alpha_0,\\beta_0)+\\theta(\\alpha_1,\\beta_1)$."
+  },
+  {
+    "type": "Theorem 3.3.4",
+    "concept": "What is the Riesz convexity theorem and what additional condition does it require compared to Riesz-Thorin?",
+    "content": "If $1\\le p_0\\le q_0\\le\\infty$, $1\\le p_1\\le q_1\\le\\infty$, and $T$ is linear with $(p_0,q_0)$-strong norm $\\le M_0$ and $(p_1,q_1)$-strong norm $\\le M_1$, then $T$ is $(p,q)$-strong with $\\|T\\|_{L^p\\to L^q}\\le M_0^{1-\\theta}M_1^\\theta$. The extra condition is $p_i\\le q_i$ (i.e., $(1/p_i,1/q_i)\\in\\Delta$)."
+  },
+  {
+    "type": "Lemma 3.3.5",
+    "concept": "What is the three lines theorem (Hadamard)?",
+    "content": "Let $\\Omega=\\{z\\in\\mathbb{C}:0<\\operatorname{Re}(z)<1\\}$. If $F\\in H(\\Omega)\\cap C(\\overline{\\Omega})$ and $M_\\theta=\\sup_{y\\in\\mathbb{R}}|F(\\theta+iy)|$, then $M_\\theta\\le M_0^{1-\\theta}M_1^\\theta$ for $0\\le\\theta\\le 1$."
+  },
+  {
+    "type": "Theorem 3.3.6",
+    "concept": "What is the general Riesz-Thorin interpolation theorem (complex method) for arbitrary linear operators on complex $L^p$ spaces?",
+    "content": "If $T$ is a complex linear operator, continuous from $L^{p_0}\\to L^{q_0}$ with norm $\\le M_0$ and from $L^{p_1}\\to L^{q_1}$ with norm $\\le M_1$ ($1\\le p_0<p_1\\le\\infty$, $1\\le q_0\\neq q_1\\le\\infty$), then $T:L^p\\to L^q$ is continuous with $\\|T\\|_{L^p\\to L^q}\\le M_0^{1-\\theta}M_1^\\theta$, where $\\frac{1}{p}=\\frac{1-\\theta}{p_0}+\\frac{\\theta}{p_1}$ and $\\frac{1}{q}=\\frac{1-\\theta}{q_0}+\\frac{\\theta}{q_1}$."
+  },
+  {
+    "type": "Theorem 3.4.1",
+    "concept": "If $f\\in L^p(\\mathbb{T})$ and $g\\in L^q(\\mathbb{T})$ with $\\frac{1}{p}+\\frac{1}{q}=1$, what can you say about $f*g$ and its norm?",
+    "content": "$f*g\\in C(\\mathbb{T})$ and $\\|f*g\\|_\\infty\\le\\|f\\|_p\\|g\\|_q$. The continuity follows from the continuity of translations in $L^p$."
+  },
+  {
+    "type": "Theorem 3.4.2",
+    "concept": "If $f\\in L^1(\\mathbb{T})$ and $g\\in L^p(\\mathbb{T})$, what can you say about $f*g$?",
+    "content": "$f*g\\in L^p(\\mathbb{T})$ and $\\|f*g\\|_p\\le\\|f\\|_1\\|g\\|_p$. This is proved using Riesz-Thorin interpolation between the $(1,1)$ and $(\\infty,\\infty)$ cases."
+  },
+  {
+    "type": "Theorem 3.4.3",
+    "concept": "What is Young's theorem for convolution on the torus?",
+    "content": "If $f\\in L^{p_1}(\\mathbb{T})$ and $g\\in L^{p_2}(\\mathbb{T})$ with $\\frac{1}{p_1}+\\frac{1}{p_2}\\ge 1$, then $f*g\\in L^{p_3}(\\mathbb{T})$ where $\\frac{1}{p_3}=\\frac{1}{p_1}+\\frac{1}{p_2}-1$, and $\\|f*g\\|_{p_3}\\le\\|f\\|_{p_1}\\|g\\|_{p_2}$."
+  },
+  {
+    "type": "Theorem 3.4.4",
+    "concept": "What is the Hausdorff-Young theorem?",
+    "content": "For $1<p\\le 2$ and $q\\ge 2$ with $\\frac{1}{p}+\\frac{1}{q}=1$: (i) If $f\\in L^p(\\mathbb{T})$ then $(\\hat{f}(n))\\in\\ell^q(\\mathbb{Z})$ with $\\|\\hat{f}\\|_{\\ell^q}\\le\\|f\\|_p$. (ii) If $(a_n)\\in\\ell^p(\\mathbb{Z})$ then $f(t)=\\sum a_n e^{int}\\in L^q(\\mathbb{T})$ with $\\|f\\|_q\\le\\|(a_n)\\|_p$. Proved by interpolating between the $(1,\\infty)$ (Riemann-Lebesgue) and $(2,2)$ (Plancherel) cases."
+  },
+  {
+    "type": "Definition 3.5.1",
+    "concept": "How is the Hardy-Littlewood maximal function defined for a measure $\\mu$ and for an $L^1$ function $f$?",
+    "content": "For $\\mu\\in M(\\mathbb{T})$: $\\mu^*(t)=\\sup_{h>0}\\frac{|\\mu|(t-h,t+h)}{m(t-h,t+h)}$. For $f\\in L^1(\\mathbb{T})$: $f^*(t)=\\sup_{h>0}\\frac{1}{2h}\\int_{t-h}^{t+h}|f(s)|ds$."
+  },
+  {
+    "type": "Lemma 3.5.2",
+    "concept": "What does the covering lemma say about an open set $\\Omega$ that is a union of intervals in $\\mathbb{T}$?",
+    "content": "If $\\Omega=\\bigcup_{\\alpha\\in J}I_\\alpha$ is measurable and bounded, there exists a countable subfamily $\\{I_n\\}$ such that $m(\\bigcup_{n=1}^\\infty I_n)\\ge\\frac{1}{4}m(\\Omega)$. This is a Vitali-type covering lemma."
+  },
+  {
+    "type": "Theorem 3.5.3",
+    "concept": "What is the weak $(1,1)$ inequality for the Hardy-Littlewood maximal function of a measure?",
+    "content": "If $\\mu\\in M(\\mathbb{T})$ then $m(\\{t\\in\\mathbb{T}:\\mu^*(t)>\\lambda\\})\\le\\frac{4\\|\\mu\\|_1}{\\lambda}$. This is the key weak-type estimate for the maximal function."
+  },
+  {
+    "type": "Theorem 3.5.4",
+    "concept": "What are the weak $(1,1)$ and strong $(p,p)$ estimates for the Hardy-Littlewood maximal function of an $L^p$ function?",
+    "content": "(i) Weak $(1,1)$: $m(\\{f^*>\\lambda\\})\\le\\frac{4\\|f\\|_1}{\\lambda}$ for all $f\\in L^1$. (ii) Strong $(p,p)$ for $1<p\\le\\infty$: $\\exists C_p>0$ such that $\\|f^*\\|_p\\le C_p\\|f\\|_p$. The $(p,p)$ case follows from Marcinkiewicz interpolation since $\\|f^*\\|_\\infty\\le\\|f\\|_\\infty$."
+  },
+  {
+    "type": "Theorem 3.5.5",
+    "concept": "What does the Lebesgue differentiation theorem state?",
+    "content": "If $f\\in L^1(\\mathbb{T})$ then $\\lim_{h\\to 0}\\frac{1}{2h}\\int_{t-h}^{t+h}f(s)\\,ds = f(t)$ for almost every $t\\in\\mathbb{T}$. The proof uses the maximal operator theorem and density of continuous functions."
+  },
+  {
+    "type": "Definition 3.5.6",
+    "concept": "How is the radial Poisson maximal function defined?",
+    "content": "For $\\mu\\in M(\\mathbb{T})$: $P^*\\mu(t)=\\sup_{0<r<1}|P_r*\\mu|(t)$. For $f\\in L^1(\\mathbb{T})$: $P^*f(t)=\\sup_{0<r<1}|P_r*f|(t)$, where $P_r$ is the Poisson kernel."
+  },
+  {
+    "type": "Lemma 3.5.7",
+    "concept": "If $s$ is a simple, even, monotone decreasing, non-negative function on $[0,\\pi)$ and $\\mu\\in M(\\mathbb{T})$, what bound holds for $|s*\\mu(t)|$?",
+    "content": "$|s*\\mu(t)|\\le\\|s\\|_1\\,\\mu^*(t)$ for all $t\\in[-\\pi,\\pi)$, where $\\mu^*$ is the Hardy-Littlewood maximal function of $\\mu$."
+  },
+  {
+    "type": "Lemma 3.5.8",
+    "concept": "How does the Poisson maximal function compare with the Hardy-Littlewood maximal function?",
+    "content": "For $\\mu\\in M(\\mathbb{T})$, $|P^*\\mu(t)|\\le\\mu^*(t)$. That is, the Poisson maximal function is pointwise bounded by the Hardy-Littlewood maximal function."
+  },
+  {
+    "type": "Theorem 3.5.9",
+    "concept": "What are the weak $(1,1)$ and strong $(p,p)$ estimates for the Poisson maximal function?",
+    "content": "(i) Weak $(1,1)$: $m(\\{P^*f>\\lambda\\})\\le\\frac{4\\|f\\|_1}{\\lambda}$. (ii) Strong $(p,p)$ for $1<p\\le\\infty$: $\\|P^*f\\|_p\\le C_p\\|f\\|_p$. These follow from Lemma 3.5.8, Theorem 3.5.4, and Marcinkiewicz interpolation."
+  },
+  {
+    "type": "Corollary 3.5.10",
+    "concept": "What does Abel summability almost everywhere say for $L^1$ functions?",
+    "content": "If $f\\in L^1(\\mathbb{T})$ then $\\lim_{r\\to 1}P_r*f(t)=f(t)$ for almost every $t$. Equivalently, the Fourier series of $f$ is Abel summable to $f(t)$ at almost every point: $\\lim_{r\\to 1}\\sum_{n=-\\infty}^{\\infty}\\hat{f}(n)r^{|n|}e^{int}=f(t)$ a.e."
+  },
+  {
+    "type": "Definition 3.6.1",
+    "concept": "When is a function $u:\\Omega\\to\\mathbb{R}$ (or $\\mathbb{C}$) called harmonic?",
+    "content": "$u$ is harmonic if $u\\in C(\\Omega)$ and satisfies Laplace's equation $\\Delta u = \\frac{\\partial^2 u}{\\partial x^2}+\\frac{\\partial^2 u}{\\partial y^2}=0$ for all $z\\in\\Omega$. The Poisson kernel $P(z)=\\operatorname{Re}(\\frac{1+z}{1-z})$ is the classical example on $\\mathbb{D}$."
+  },
+  {
+    "type": "Proposition 3.6.2",
+    "concept": "What are the four fundamental properties of the Poisson kernel $P(z)$?",
+    "content": "(1) $P\\in\\operatorname{Har}(\\mathbb{D})$. (2) $P(0)=1$, $P(z)\\ge 0$, $P(z)=P(\\bar{z})$ for $z\\in\\mathbb{D}$. (3) $\\int_{-\\pi}^{\\pi}P(re^{it})\\frac{dt}{2\\pi}=1$ for all $0<r<1$. (4) $\\lim_{r\\to 1}\\int_{|t|>\\delta}P(re^{it})\\frac{dt}{2\\pi}=0$ for all $\\delta>0$."
+  },
+  {
+    "type": "Definition 3.6.3",
+    "concept": "How is the Poisson integral of a continuous function $f$ defined?",
+    "content": "$P(f)(z)=\\int_{-\\pi}^{\\pi}f(t)P(ze^{-it})\\frac{dt}{2\\pi}$. In polar coordinates: $P(f)(re^{it})=P_r*f(t)$ for $0\\le r<1$."
+  },
+  {
+    "type": "Theorem 3.6.4",
+    "concept": "What are the two key properties of the Poisson integral of a continuous function?",
+    "content": "(1) If $f\\in C(\\mathbb{T})$ then $P(f)\\in\\operatorname{Har}(\\mathbb{D})$. (2) $\\lim_{z\\to e^{is}}P(f)(z)=f(s)$ uniformly on $\\mathbb{T}$, i.e., the Poisson integral solves the Dirichlet problem for continuous boundary data."
+  },
+  {
+    "type": "Theorem 3.6.5",
+    "concept": "What are the three equivalent characterizations of a harmonic function?",
+    "content": "The following are equivalent for $u:\\Omega\\to\\mathbb{R}$: (1) $u\\in\\operatorname{Har}(\\Omega)$. (2) $u\\in C(\\Omega)$ and satisfies the mean value property: $u(z_0)=\\int_{-\\pi}^{\\pi}u(z_0+re^{it})\\frac{dt}{2\\pi}$ for all $\\overline{D}(z_0,R)\\subset\\Omega$, $0\\le r\\le R$. (3) $u\\in C^\\infty(\\Omega)$ and satisfies the Poisson integral formula on all discs contained in $\\Omega$."
+  },
+  {
+    "type": "Theorem 3.6.6",
+    "concept": "What does the Dirichlet problem for the disc state?",
+    "content": "(i) If $u\\in\\operatorname{Har}(\\mathbb{D})\\cap C(\\overline{\\mathbb{D}})$ then $u=P(f)$ where $f$ is the restriction of $u$ to $\\mathbb{T}$. (ii) Given $f\\in C(\\mathbb{T})$, there exists a unique $u\\in\\operatorname{Har}(\\mathbb{D})\\cap C(\\overline{\\mathbb{D}})$ such that $u(e^{it})=f(t)$. Uniqueness follows from the maximum principle."
+  },
+  {
+    "type": "Proposition 3.6.7",
+    "concept": "If $u$ is harmonic on $\\mathbb{D}$, is $M_p(u,r)=\\|u_r\\|_p$ increasing in $r$?",
+    "content": "Yes. For $0<r,s<1$, $M_p(u,rs)=\\|u_{rs}\\|_p=\\|u_r*P_s\\|_p\\le\\|u_r\\|_p\\|P_s\\|_1=M_p(u,r)$. So $M_p(u,r)$ is increasing in $r$."
+  },
+  {
+    "type": "Definition 3.6.8",
+    "concept": "How is the Hardy space $h^p(\\mathbb{D})$ defined?",
+    "content": "$h^p(\\mathbb{D})=\\{u\\in\\operatorname{Har}(\\mathbb{D}):\\|u\\|_{h^p}=\\sup_{0<r<1}M_p(u,r)<\\infty\\}$, where $M_p(u,r)=(\\int_{-\\pi}^{\\pi}|u(re^{it})|^p\\frac{dt}{2\\pi})^{1/p}$ for $1\\le p<\\infty$."
+  },
+  {
+    "type": "Proposition 3.6.9",
+    "concept": "What is $h^\\infty(\\mathbb{D})$ and what is the norm of a non-negative harmonic function?",
+    "content": "(i) $h^\\infty(\\mathbb{D})=\\{u\\in\\operatorname{Har}(\\mathbb{D}): u \\text{ is bounded}\\}$. (ii) If $u\\in\\operatorname{Har}(\\mathbb{D})$ with $u\\ge 0$, then $u\\in h^1(\\mathbb{D})$ and $\\|u\\|_{h^1}=u(0)$, since $u(0)=\\int_{-\\pi}^{\\pi}u(re^{it})\\frac{dt}{2\\pi}=M_1(u,r)$."
+  },
+  {
+    "type": "Definition 3.6.10",
+    "concept": "How is the Poisson integral of a measure $\\mu\\in M(\\mathbb{T})$ defined?",
+    "content": "$P(\\mu)(z)=\\int_{-\\pi}^{\\pi}P(ze^{-it})d\\mu(t)$ for $z\\in\\mathbb{D}$. When $d\\mu = f\\,dm$ with $f\\in L^1(\\mathbb{T})$, this reduces to $P(f)(z)=\\int_{-\\pi}^{\\pi}P(ze^{-it})f(t)\\frac{dt}{2\\pi}$."
+  },
+  {
+    "type": "Theorem 3.6.11",
+    "concept": "What is the identification between $h^1(\\mathbb{D})$ and measures on the torus?",
+    "content": "$h^1(\\mathbb{D}) = M(\\mathbb{T})$ with equal norms (isometric isomorphism). (i) If $\\mu\\in M(\\mathbb{T})$ then $P(\\mu)\\in h^1(\\mathbb{D})$ with $\\|P(\\mu)\\|_{h^1}\\le\\|\\mu\\|_1$. (ii) If $u\\in h^1(\\mathbb{D})$, there exists $\\mu\\in M(\\mathbb{T})$ such that $u=P(\\mu)$ and $\\|\\mu\\|_1\\le\\|u\\|_{h^1}$."
+  },
+  {
+    "type": "Theorem 3.6.12",
+    "concept": "What is the identification between $h^p(\\mathbb{D})$ and $L^p(\\mathbb{T})$ for $1<p\\le\\infty$?",
+    "content": "$h^p(\\mathbb{D}) = L^p(\\mathbb{T})$ with equal norms for $1<p\\le\\infty$. (i) If $f\\in L^p(\\mathbb{T})$ then $P(f)\\in h^p(\\mathbb{D})$ with $\\|P(f)\\|_{h^p}\\le\\|f\\|_p$. (ii) If $u\\in h^p(\\mathbb{D})$, there exists $f\\in L^p(\\mathbb{T})$ such that $u=P(f)$ and $\\|f\\|_p\\le\\|u\\|_{h^p}$."
+  },
+  {
+    "type": "Definition 3.7.1",
+    "concept": "How is the conjugate harmonic function $\\tilde{u}$ defined?",
+    "content": "For a real harmonic function $u:\\mathbb{D}\\to\\mathbb{R}$, its harmonic conjugate $\\tilde{u}$ is the unique real harmonic function such that $F=u+i\\tilde{u}\\in H(\\mathbb{D})$ and $\\tilde{u}(0)=0$."
+  },
+  {
+    "type": "Example 3.7.3",
+    "concept": "What is the conjugate Poisson kernel $Q(z)$ and what is its Fourier series?",
+    "content": "$Q(z)=\\operatorname{Im}(\\frac{1+z}{1-z})$ is the conjugate Poisson kernel. In polar form: $Q(re^{it})=\\frac{2r\\sin t}{1+r^2-2r\\cos t}=-i\\sum_{n=-\\infty}^{\\infty}\\operatorname{sign}(n)r^{|n|}e^{int}$."
+  },
+  {
+    "type": "Proposition 3.7.4",
+    "concept": "If $u=P(\\mu)$ is the Poisson integral of a measure, what is its harmonic conjugate?",
+    "content": "$\\tilde{u}(z)=\\int_{-\\pi}^{\\pi}Q(ze^{-it})d\\mu(t)=Q_r*\\mu(t)$ for $z=re^{it}$. This follows because $Q(0)=0$ and $P(\\mu)(z)+i\\tilde{u}(z)=\\int\\frac{e^{it}+z}{e^{it}-z}d\\mu(t)\\in H(\\mathbb{D})$."
+  },
+  {
+    "type": "Theorem 3.7.5",
+    "concept": "Does the conjugate function $\\tilde{f}$ exist almost everywhere for $f\\in L^1(\\mathbb{T})$?",
+    "content": "Yes. For $f\\in L^1_{\\mathbb{R}}(\\mathbb{T})$, the limit $\\tilde{f}(t)=\\lim_{r\\to 1}Q_r*f(t)$ exists for almost every $t$. The proof uses the fact that $e^{-(u+i\\tilde{u})}$ is bounded and analytic, hence has boundary values a.e."
+  },
+  {
+    "type": "Theorem 3.7.6",
+    "concept": "What is the weak $(1,1)$ inequality for the conjugate function?",
+    "content": "There exists $C>0$ such that $m(\\{t\\in\\mathbb{T}:|\\tilde{f}(t)|>\\lambda\\})\\le C\\frac{\\|f\\|_1}{\\lambda}$ for all $f\\in L^1(\\mathbb{T})$. The proof uses the harmonic function $H_\\lambda(w)=1+\\frac{1}{\\pi}\\operatorname{Arg}(\\frac{w-i\\lambda}{w+i\\lambda})$."
+  },
+  {
+    "type": "Theorem 3.7.7",
+    "concept": "What are the properties of the conjugate function on $L^2(\\mathbb{T})$?",
+    "content": "If $f\\in L^2_{\\mathbb{R}}(\\mathbb{T})$ then $\\tilde{f}\\in L^2_{\\mathbb{R}}(\\mathbb{T})$ with $\\widehat{\\tilde{f}}(n)=-i\\operatorname{sign}(n)\\hat{f}(n)$ for all $n\\in\\mathbb{Z}$. In particular, $\\|\\tilde{f}\\|_2=\\|f\\|_2$ (the conjugation operator is an isometry on $L^2$)."
+  },
+  {
+    "type": "Theorem 3.7.8",
+    "concept": "What is the $L^p$ boundedness of the conjugate function for $1<p<\\infty$?",
+    "content": "For $1<p<\\infty$, there exists $C_p>0$ such that $\\|\\tilde{f}\\|_p\\le C_p\\|f\\|_p$ for all $f\\in L^p(\\mathbb{T})$. For $1<p<2$ this follows from Marcinkiewicz interpolation (weak $(1,1)$ + strong $(2,2)$). For $p>2$ it follows by duality, since the conjugation operator is self-adjoint."
+  },
+  {
+    "type": "Exercise 3.8.1",
+    "concept": "For $p<q$ and a finite measure space $(R,\\Sigma,\\mu)$, what inclusion holds between $L^{q,\\infty}$ and $L^p$, and is it strict?",
+    "content": "$L^{q,\\infty}(R,\\mu)\\subseteq L^p(R,\\mu)$. For Lebesgue measure on $[0,1]$, the inclusion is strict (e.g., $f(x)=x^{-1/q}$ is in $L^p$ but not in $L^{q,\\infty}$). For counting measure on $\\mathbb{N}$, the same relationship holds."
+  },
+  {
+    "type": "Exercise 3.8.2",
+    "concept": "What are the properties of the Hardy averaging operator $Af(x)=\\frac{1}{x}\\int_0^x f(t)dt$?",
+    "content": "(a) $Af\\in C([0,1])$ for all $f\\in L^1([0,1])$. (b) $A$ is of weak type $(1,1)$. (c) $A$ is of strong type $(p,p)$ for $1<p<\\infty$. This operator is a fundamental example in harmonic analysis."
+  },
+  {
+    "type": "Exercise 3.8.3",
+    "concept": "What can you say about the Poisson maximal function in $L^p$ for $1<p<\\infty$?",
+    "content": "There exists $C_p>0$ such that $\\|P^*f\\|_p\\le C_p\\|f\\|_p$ for all $f\\in L^p(\\mathbb{T})$, $1<p<\\infty$. For $p=1$, the strong inequality fails but the weak $(1,1)$ inequality holds."
+  },
+  {
+    "type": "Exercise 3.8.4",
+    "concept": "What can you say about Abel summability of the Fourier series of an integrable function?",
+    "content": "The Fourier series of $f\\in L^1(\\mathbb{T})$ is Abel summable to $f(t)$ at almost every point, i.e., $\\lim_{r\\to 1}\\sum_{n=-\\infty}^{\\infty}\\hat{f}(n)r^{|n|}e^{int}=f(t)$ a.e."
+  },
+  {
+    "type": "Exercise 3.8.5",
+    "concept": "How is Young's inequality for convolution proved using interpolation?",
+    "content": "(a) If $f\\in L^1$ and $g\\in L^\\infty$, then $f*g\\in C(\\mathbb{T})$ with $\\|f*g\\|_\\infty\\le\\|f\\|_1\\|g\\|_\\infty$. (b) If $f\\in L^1$ and $g\\in L^p$, then $f*g\\in L^p$ with $\\|f*g\\|_p\\le\\|f\\|_1\\|g\\|_p$. This follows by interpolating between the $(1,1)$ and $(\\infty,\\infty)$ cases for the convolution operator $T_f(g)=f*g$."
+  },
+  {
+    "type": "Exercise 3.8.6",
+    "concept": "How is the Hausdorff-Young inequality $(\\sum|\\hat{f}(n)|^{p'})^{1/p'}\\le\\|f\\|_p$ proved for $1<p<2$?",
+    "content": "Use the Riesz-Thorin interpolation theorem. The Fourier transform $\\mathcal{F}:L^1\\to\\ell^\\infty$ has norm $1$ (Riemann-Lebesgue) and $\\mathcal{F}:L^2\\to\\ell^2$ is an isometry (Plancherel: $(\\sum|\\hat{f}(n)|^2)^{1/2}=\\|f\\|_2$). Interpolating between $(1,\\infty)$ and $(2,2)$ yields the result for $1<p<2$ with $\\frac{1}{p}+\\frac{1}{p'}=1$."
+  },
+  {
+    "type": "Exercise 3.3.2",
+    "concept": "For the operator $T(x,y)=(x+y,x-y)$ studied in the contexts $p_0=\\infty$, $q_0=1$ and $p_1=q_1=2$, what is the interpolated result for $\\theta=\\frac{1}{2}$ (i.e., $p=4$, $q=\\frac{4}{3}$)?",
+    "content": "This exercise illustrates Riesz-Thorin interpolation. $T$ is $(\\infty,1)$-strong (easy to check) and $(2,2)$-strong (isometry up to factor). Interpolating with $\\theta=1/2$ gives $p=4$, $q=4/3$ with the interpolated norm bound."
   }
 ]
