@@ -1,0 +1,62 @@
+[
+  {
+    "type": "Definition 1.1.1",
+    "concept": "The unit circle $\\mathbb{T}$",
+    "content": "$\\mathbb{T} = \\{z \\in \\mathbb{C} : |z| = 1\\}$. It is a compact metric space with the topology induced by $\\mathbb{C}$. It is a multiplicative group with unit $e=1$ and $z^{-1} = \\overline{z}$."
+  },
+  {
+    "type": "Definition 1.1.2",
+    "concept": "Continuous functions and trigonometric polynomials",
+    "content": "$C(\\mathbb{T})$ is the space of continuous functions $f: \\mathbb{T} \\rightarrow \\mathbb{C}$, identified with $\\{f \\in C([-\\pi, \\pi]) : f(\\pi) = f(-\\pi)\\}$. The subspace $\\Pi(\\mathbb{T}) = \\{f(t) = \\sum_{k=-M}^{N} \\alpha_k e^{ikt} : N, M \\in \\mathbb{N}, \\alpha_k \\in \\mathbb{C}\\}$ is the space of trigonometric polynomials."
+  },
+  {
+    "type": "Proposition 1.1.3",
+    "concept": "$C(\\mathbb{T})$ properties",
+    "content": "$C(\\mathbb{T})$ is a Banach algebra with point-wise multiplication and the supremum norm $||f||_{\\infty} = \\sup_{t \\in [-\\pi, \\pi)} |f(t)|$. The space of trigonometric polynomials $\\Pi(\\mathbb{T})$ is dense in $C(\\mathbb{T})$."
+  },
+  {
+    "type": "Definition 1.1.5",
+    "concept": "Lebesgue integrable functions on $\\mathbb{T}$",
+    "content": "A function $f: \\mathbb{T} \\rightarrow \\mathbb{C}$ is Lebesgue integrable if it is Lebesgue measurable and $\\int_{-\\pi}^{\\pi} |f(t)| \\frac{dt}{2\\pi} < \\infty$. $L^1(\\mathbb{T})$ is the space of equivalence classes of such functions."
+  },
+  {
+    "type": "Proposition 1.1.6",
+    "concept": "$L^1(\\mathbb{T})$ space",
+    "content": "$L^1(\\mathbb{T})$ is a Banach space equipped with the norm $||f||_1 = \\int_{-\\pi}^{\\pi} |f(t)| \\frac{dt}{2\\pi}$."
+  },
+  {
+    "type": "Proposition 1.1.8 & Corollary 1.1.9",
+    "concept": "Dense subsets of $L^1(\\mathbb{T})$",
+    "content": "Simple functions $S(\\mathbb{T})$, continuous functions $C(\\mathbb{T})$, and trigonometric polynomials $\\Pi(\\mathbb{T})$ are all dense in $L^1(\\mathbb{T})$."
+  },
+  {
+    "type": "Definition 1.2.1",
+    "concept": "Non-negative measure",
+    "content": "A set function $\\lambda: \\mathcal{B}(\\mathbb{T}) \\rightarrow [0, \\infty]$ is a non-negative measure if $\\lambda(\\emptyset) = 0$ and it is countably additive for disjoint sets. It is regular if for any Borel set $A$ and $\\epsilon > 0$, there exist a compact $K$ and open $G$ ($K \\subset A \\subset G$) such that $\\lambda(G \\setminus K) < \\epsilon$."
+  },
+  {
+    "type": "Definition 1.2.3",
+    "concept": "Complex measure and its variation",
+    "content": "A set function $\\mu: \\mathcal{B}(\\mathbb{T}) \\rightarrow \\mathbb{C}$ is a complex measure if it is countably additive. Its variation $|\\mu|$ on $A$ is $\\sup \\sum_{n=1}^{\\infty} |\\mu(A_n)|$ over all countable disjoint Borel partitions of $A$."
+  },
+  {
+    "type": "Proposition 1.2.4",
+    "concept": "Properties of variation $|\\mu|$",
+    "content": "For a complex measure $\\mu$, its variation $|\\mu|$ is a non-negative measure, and it is the smallest non-negative measure $\\lambda$ satisfying $|\\mu(E)| \\le \\lambda(E)$ for all Borel sets $E$."
+  },
+  {
+    "type": "Lemma 1.2.5",
+    "concept": "Subset sum of complex numbers",
+    "content": "For any $z_1, ..., z_n \\in \\mathbb{C}$, there exists a subset $S \\subset \\{1, ..., n\\}$ such that $|\\sum_{j \\in S} z_j| \\ge \\frac{1}{6} \\sum_{j=1}^n |z_j|$."
+  },
+  {
+    "type": "Proposition 1.2.6",
+    "concept": "Finiteness of complex measure variation",
+    "content": "If $\\mu$ is a complex measure, then its variation $|\\mu|$ is a finite measure (i.e., $|\\mu|(\\mathbb{T}) < \\infty$)."
+  },
+  {
+    "type": "Theorem 1.2.7",
+    "concept": "Measure induced by an $L^1$ function",
+    "content": "For $f \\in L^1(\\mathbb{T})$, the set function $\\mu(E) = \\int_E f(t) \\frac{dt}{2\\pi}$ is a regular complex measure, its variation is $|\\mu|(E) = \\int_E |f(t)| \\frac{dt}{2\\pi}$, and $\\mu$ is absolutely continuous with respect to the Lebesgue measure $m$."
+  }
+]
