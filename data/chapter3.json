@@ -1,7 +1,12 @@
 [
   {
-    "type": "Definition 1.1.1",
-    "concept": "The unit circle $\\mathbb{T}$",
-    "content": "$\\mathbb{T} = \\{z \\in \\mathbb{C} : |z| = 1\\}$. It is a compact metric space with the topology induced by $\\mathbb{C}$. It is a multiplicative group with unit $e=1$ and $z^{-1} = \\overline{z}$. It can be identified with the quotient group $\\mathbb{R}/2\\pi\\mathbb{Z} = [-\\pi, \\pi)$."
+    "type": "Theorem 3.1.1",
+    "concept": "What is the dual of $L^1(\mathbb{T})$ and what is it's norm?",
+    "content": "$L^\infty(\mathbb{T})$ and the norms are the same"
+  },
+  {
+    "type": "Theorem 3.1.2",
+    "concept": "What is the dual of $L^p(\mathbb{T})$ for $1<p<\infty$ and what is it's norm?",
+    "content": "$L^{p^\prime}(\mathbb{T})$ where $\frac{1}{p}+\frac{1}{p^\prime}=1$ and the norms are the same"
   }
 ]
