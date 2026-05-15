@@ -6,7 +6,7 @@
   },
   {
     "type": "Theorem 3.1.2",
-    "concept": "What is the dual of $L^p(\mathbb{T})$ for $1<p<\infty$ and what is it's norm?",
-    "content": "$L^{p^\\prime}(\\mathbb{T})$ where $\\frac{1}{p}+\\frac{1}{p^\prime}=1$ and the norms are the same"
+    "concept": "What is the dual of $L^p(\\mathbb{T})$ for $1<p<\\infty$ and what is it's norm?",
+    "content": "$L^{p^\\prime}(\\mathbb{T})$ where $\\frac{1}{p}+\\frac{1}{p^\\prime}=1$ and the norms are the same"
   }
 ]
