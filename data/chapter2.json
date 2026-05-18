@@ -2,12 +2,12 @@
   {
     "type": "Definition 2.1.1",
     "concept": "How is the translated measure $\\mu_t$ defined for $\\mu\\in M(\\mathbb{T})$?",
-    "content": "$\\mu_t(E) = \\mu(E-t)$ for $E\\in\\mathcal{B}(\\mathbb{T})$. Equivalently, using duality: $\\int_{\\mathbb{T}}\\phi(s)\\,d\\mu_t(s) = \\int_{\\mathbb{T}}\\phi_t(s)\\,d\\mu(s)$ for $\\phi\\in C(\\mathbb{T})$, where $\\phi_t(s)=\\phi(t+s)$."
+    "content": "$\\mu_t(E) = \\mu(E-t)$ for $E\\in\\mathcal{B}(\\mathbb{T})$. Equivalently, using duality: $\\int_{\\mathbb{T}}\\phi(s)\\,d\\mu_t(s) = \\int_{\\mathbb{T}}\\phi_{-t}(s)\\,d\\mu(s)$ for $\\phi\\in C(\\mathbb{T})$, where $\\phi_{-t}(s)=\\phi(s+t)$."
   },
   {
     "type": "Note 2.1.2",
     "concept": "If $d\\mu = f\\,dm$ with $f\\in L^1(\\mathbb{T})$, what is $d\\mu_t$?",
-    "content": "$d\\mu_t = f_t\\,dm$, where $f_t(s) = f(t+s)$. This follows from $\\mu_t(E) = \\int_{E-t}f(s)\\,dm(s) = \\int_E f(t+s)\\,dm(s)$."
+    "content": "$d\\mu_t = f_t\\,dm$, where $f_t(s) = f(s-t)$. This follows from $\\mu_t(E) = \\int_{E-t}f(s)\\,dm(s) = \\int_E f(u-t)\\,dm(u) = \\int_E f_t(u)\\,dm(u)$."
   },
   {
     "type": "Proposition 2.1.3",
@@ -67,7 +67,7 @@
   {
     "type": "Note 2.2.2",
     "concept": "What are the basic examples of Fourier coefficients and convolutions with exponentials?",
-    "content": "(1) $\\phi_n\\ast\\mu = \\hat{\\mu}(n)\\phi_n$. (2) $\\hat{\\mu}(n) = (\\phi_n\\ast\\mu)(0)$. (3) If $f=\\sum\\alpha_k\\phi_k\\in\\Pi(\\mathbb{T})$, then $f\\ast\\mu = \\sum\\alpha_k\\hat{\\mu}(k)\\phi_k$. (4) For $f_\\varepsilon = \\frac{1}{2\\varepsilon}\\chi_{[-\\varepsilon,\\varepsilon]}$, $f_\\varepsilon\\ast\\mu(s) = \\mu(s-\\varepsilon,s+\\varepsilon)/(2\\varepsilon)$. (5) $\\hat{\\mu_t}(n) = \\hat{\\mu}(n)\\phi_n(t)$."
+    "content": "(1) $\\phi_n\\ast\\mu = \\hat{\\mu}(n)\\phi_n$. (2) $\\hat{\\mu}(n) = (\\phi_n\\ast\\mu)(0)$. (3) If $f=\\sum\\alpha_k\\phi_k\\in\\Pi(\\mathbb{T})$, then $f\\ast\\mu = \\sum\\alpha_k\\hat{\\mu}(k)\\phi_k$. (4) For $f_\\varepsilon = \\frac{1}{2\\varepsilon}\\chi_{[-\\varepsilon,\\varepsilon]}$, $f_\\varepsilon\\ast\\mu(s) = \\mu(s-\\varepsilon,s+\\varepsilon)/(2\\varepsilon)$. (5) $\\hat{\\mu_t}(n) = \\hat{\\mu}(n)\\overline{\\phi_n(t)}$."
   },
   {
     "type": "Theorem 2.2.3",
