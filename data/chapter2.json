@@ -12,52 +12,52 @@
   {
     "type": "Proposition 2.1.3",
     "concept": "What are the continuity properties of translations in $C(\\mathbb{T})$, $L^p(\\mathbb{T})$, and $M(\\mathbb{T})$?",
-    "content": "(i) For $f\\in C(\\mathbb{T})$, $t\\mapsto f_t$ is continuous from $\\mathbb{T}$ to $C(\\mathbb{T})$ (uniform continuity on a compact set). (ii) For $f\\in L^p(\\mathbb{T})$, $t\\mapsto f_t$ is continuous from $\\mathbb{T}$ to $L^p(\\mathbb{T})$ (approximate by continuous functions). (iii) For $\\mu\\in M(\\mathbb{T})$, $t\\mapsto\\mu_t$ is $w^*$-continuous (i.e., $t\\mapsto\\int\\phi\\,d\\mu_t$ is continuous for each $\\phi\\in C(\\mathbb{T})$)."
+    "content": "(i) For $f\\in C(\\mathbb{T})$, $t\\mapsto f_t$ is continuous from $\\mathbb{T}$ to $C(\\mathbb{T})$ (uniform continuity on a compact set). (ii) For $f\\in L^p(\\mathbb{T})$, $t\\mapsto f_t$ is continuous from $\\mathbb{T}$ to $L^p(\\mathbb{T})$ (approximate by continuous functions). (iii) For $\\mu\\in M(\\mathbb{T})$, $t\\mapsto\\mu_t$ is $w^{\\ast}$-continuous (i.e., $t\\mapsto\\int\\phi\\,d\\mu_t$ is continuous for each $\\phi\\in C(\\mathbb{T})$)."
   },
   {
     "type": "Definition 2.1.4",
     "concept": "How is the convolution of a continuous function and a measure defined?",
-    "content": "For $f\\in C(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$: $f*\\mu(s) = \\int_{-\\pi}^{\\pi} f(s-t)\\,d\\mu(t)$."
+    "content": "For $f\\in C(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$: $f\\ast\\mu(s) = \\int_{-\\pi}^{\\pi} f(s-t)\\,d\\mu(t)$."
   },
   {
     "type": "Proposition 2.1.5",
-    "concept": "What are the properties of $f*\\mu$ when $f\\in C(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
-    "content": "$f*\\mu\\in C(\\mathbb{T})$ with $\\|f*\\mu\\|_\\infty \\le \\|f\\|_\\infty\\|\\mu\\|_1$ and $\\|f*\\mu\\|_1 \\le \\|f\\|_1\\|\\mu\\|_1$. Continuity follows from the continuity of translations in $C(\\mathbb{T})$."
+    "concept": "What are the properties of $f\\ast\\mu$ when $f\\in C(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
+    "content": "$f\\ast\\mu\\in C(\\mathbb{T})$ with $\\|f\\ast\\mu\\|_\\infty \\le \\|f\\|_\\infty\\|\\mu\\|_1$ and $\\|f\\ast\\mu\\|_1 \\le \\|f\\|_1\\|\\mu\\|_1$. Continuity follows from the continuity of translations in $C(\\mathbb{T})$."
   },
   {
     "type": "Lemma 2.1.6",
-    "concept": "How can convolution $\\mu*f$ be extended from $C(\\mathbb{T})$ to $L^1(\\mathbb{T})$?",
-    "content": "If $f_n\\in C(\\mathbb{T})$ and $f_n\\to f$ in $L^1(\\mathbb{T})$, then $\\mu*f_n$ is Cauchy in $L^1(\\mathbb{T})$ (since $\\|\\mu*f_n-\\mu*f_m\\|_1\\le\\|\\mu\\|_1\\|f_n-f_m\\|_1$) and converges to $h\\in L^1(\\mathbb{T})$. The limit $h$ is independent of the approximating sequence."
+    "concept": "How can convolution $\\mu\\ast f$ be extended from $C(\\mathbb{T})$ to $L^1(\\mathbb{T})$?",
+    "content": "If $f_n\\in C(\\mathbb{T})$ and $f_n\\to f$ in $L^1(\\mathbb{T})$, then $\\mu\\ast f_n$ is Cauchy in $L^1(\\mathbb{T})$ (since $\\|\\mu\\ast f_n-\\mu\\ast f_m\\|_1\\le\\|\\mu\\|_1\\|f_n-f_m\\|_1$) and converges to $h\\in L^1(\\mathbb{T})$. The limit $h$ is independent of the approximating sequence."
   },
   {
     "type": "Definition 2.1.7",
-    "concept": "How is the convolution $f*\\mu$ defined for $f\\in L^1(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
-    "content": "$f*\\mu$ is defined as the $L^1$ limit of $f_n*\\mu$ where $f_n\\in C(\\mathbb{T})$ converges to $f$ in $L^1$. This is well-defined by Lemma 2.1.6."
+    "concept": "How is the convolution $f\\ast\\mu$ defined for $f\\in L^1(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
+    "content": "$f\\ast\\mu$ is defined as the $L^1$ limit of $f_n\\ast\\mu$ where $f_n\\in C(\\mathbb{T})$ converges to $f$ in $L^1$. This is well-defined by Lemma 2.1.6."
   },
   {
     "type": "Proposition 2.1.8",
-    "concept": "Does $f*\\mu(s) = \\int f(s-t)\\,d\\mu(t)$ hold for $f\\in L^1(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
-    "content": "Yes, $f*\\mu(s) = \\int_{-\\pi}^{\\pi} f(s-t)\\,d\\mu(t)$ for almost every $s$. Moreover $f*\\mu\\in L^1(\\mathbb{T})$ and $\\|f*\\mu\\|_1 \\le \\|f\\|_1\\|\\mu\\|_1$."
+    "concept": "Does $f\\ast\\mu(s) = \\int f(s-t)\\,d\\mu(t)$ hold for $f\\in L^1(\\mathbb{T})$ and $\\mu\\in M(\\mathbb{T})$?",
+    "content": "Yes, $f\\ast\\mu(s) = \\int_{-\\pi}^{\\pi} f(s-t)\\,d\\mu(t)$ for almost every $s$. Moreover $f\\ast\\mu\\in L^1(\\mathbb{T})$ and $\\|f\\ast\\mu\\|_1 \\le \\|f\\|_1\\|\\mu\\|_1$."
   },
   {
     "type": "Note 2.1.9",
     "concept": "What is the convolution of two $L^1$ functions?",
-    "content": "If $f,g\\in L^1(\\mathbb{T})$ and $d\\mu = g\\,dm$, then $f*g(s) = \\int_{-\\pi}^{\\pi} f(s-t)g(t)\\,\\frac{dt}{2\\pi}$ a.e., and $f*g\\in L^1(\\mathbb{T})$ with $\\|f*g\\|_1 \\le \\|f\\|_1\\|g\\|_1$."
+    "content": "If $f,g\\in L^1(\\mathbb{T})$ and $d\\mu = g\\,dm$, then $f\\ast g(s) = \\int_{-\\pi}^{\\pi} f(s-t)g(t)\\,\\frac{dt}{2\\pi}$ a.e., and $f\\ast g\\in L^1(\\mathbb{T})$ with $\\|f\\ast g\\|_1 \\le \\|f\\|_1\\|g\\|_1$."
   },
   {
     "type": "Definition 2.1.10",
     "concept": "How is the convolution of two measures $\\mu,\\nu\\in M(\\mathbb{T})$ defined?",
-    "content": "$\\mu*\\nu$ is the measure defined by the functional $\\Lambda_{\\mu*\\nu}(\\phi) = \\int_{-\\pi}^{\\pi}\\int_{-\\pi}^{\\pi}\\phi(s+t)\\,d\\mu(t)\\,d\\nu(s)$ for $\\phi\\in C(\\mathbb{T})$. That is, $\\int\\phi(t)\\,d(\\mu*\\nu)(t) = \\int\\int\\phi(s+t)\\,d\\mu(t)\\,d\\nu(s)$."
+    "content": "$\\mu\\ast\\nu$ is the measure defined by the functional $\\Lambda_{\\mu\\ast\\nu}(\\phi) = \\int_{-\\pi}^{\\pi}\\int_{-\\pi}^{\\pi}\\phi(s+t)\\,d\\mu(t)\\,d\\nu(s)$ for $\\phi\\in C(\\mathbb{T})$. That is, $\\int\\phi(t)\\,d(\\mu\\ast\\nu)(t) = \\int\\int\\phi(s+t)\\,d\\mu(t)\\,d\\nu(s)$."
   },
   {
     "type": "Proposition 2.1.11",
     "concept": "Is convolution of measures well-defined in $M(\\mathbb{T})$ and what is its norm?",
-    "content": "Yes, $\\mu*\\nu\\in M(\\mathbb{T})$ and $\\|\\mu*\\nu\\|_1 \\le \\|\\mu\\|_1\\|\\nu\\|_1$, since $|\\Lambda_{\\mu*\\nu}(\\phi)|\\le\\|\\phi\\|_\\infty\\|\\mu\\|_1\\|\\nu\\|_1$."
+    "content": "Yes, $\\mu\\ast\\nu\\in M(\\mathbb{T})$ and $\\|\\mu\\ast\\nu\\|_1 \\le \\|\\mu\\|_1\\|\\nu\\|_1$, since $|\\Lambda_{\\mu\\ast\\nu}(\\phi)|\\le\\|\\phi\\|_\\infty\\|\\mu\\|_1\\|\\nu\\|_1$."
   },
   {
     "type": "Proposition 2.1.13",
     "concept": "What are the algebraic properties of convolution on $M(\\mathbb{T})$?",
-    "content": "$(M(\\mathbb{T}),*)$ is a commutative Banach algebra with unit $\\delta_0$: (i) $\\mu*\\nu=\\nu*\\mu$, (ii) $\\mu*(\\nu*\\eta)=(\\mu*\\nu)*\\eta$, (iii) $\\mu*(\\nu+\\eta)=\\mu*\\nu+\\mu*\\eta$, (iv) $(\\alpha\\mu)*\\nu=\\alpha(\\mu*\\nu)$, (v) $\\|\\mu*\\nu\\|_1\\le\\|\\mu\\|_1\\|\\nu\\|_1$, (vi) $\\mu*\\delta_0=\\mu$."
+    "content": "$(M(\\mathbb{T}),\\ast)$ is a commutative Banach algebra with unit $\\delta_0$: (i) $\\mu\\ast\\nu=\\nu\\ast\\mu$, (ii) $\\mu\\ast(\\nu\\ast\\eta)=(\\mu\\ast\\nu)\\ast\\eta$, (iii) $\\mu\\ast(\\nu+\\eta)=\\mu\\ast\\nu+\\mu\\ast\\eta$, (iv) $(\\alpha\\mu)\\ast\\nu=\\alpha(\\mu\\ast\\nu)$, (v) $\\|\\mu\\ast\\nu\\|_1\\le\\|\\mu\\|_1\\|\\nu\\|_1$, (vi) $\\mu\\ast\\delta_0=\\mu$."
   },
   {
     "type": "Definition 2.2.1",
@@ -67,12 +67,12 @@
   {
     "type": "Note 2.2.2",
     "concept": "What are the basic examples of Fourier coefficients and convolutions with exponentials?",
-    "content": "(1) $\\phi_n*\\mu = \\hat{\\mu}(n)\\phi_n$. (2) $\\hat{\\mu}(n) = (\\phi_n*\\mu)(0)$. (3) If $f=\\sum\\alpha_k\\phi_k\\in\\Pi(\\mathbb{T})$, then $f*\\mu = \\sum\\alpha_k\\hat{\\mu}(k)\\phi_k$. (4) For $f_\\varepsilon = \\frac{1}{2\\varepsilon}\\chi_{[-\\varepsilon,\\varepsilon]}$, $f_\\varepsilon*\\mu(s) = \\mu(s-\\varepsilon,s+\\varepsilon)/(2\\varepsilon)$. (5) $\\hat{\\mu_t}(n) = \\hat{\\mu}(n)\\phi_n(t)$."
+    "content": "(1) $\\phi_n\\ast\\mu = \\hat{\\mu}(n)\\phi_n$. (2) $\\hat{\\mu}(n) = (\\phi_n\\ast\\mu)(0)$. (3) If $f=\\sum\\alpha_k\\phi_k\\in\\Pi(\\mathbb{T})$, then $f\\ast\\mu = \\sum\\alpha_k\\hat{\\mu}(k)\\phi_k$. (4) For $f_\\varepsilon = \\frac{1}{2\\varepsilon}\\chi_{[-\\varepsilon,\\varepsilon]}$, $f_\\varepsilon\\ast\\mu(s) = \\mu(s-\\varepsilon,s+\\varepsilon)/(2\\varepsilon)$. (5) $\\hat{\\mu_t}(n) = \\hat{\\mu}(n)\\phi_n(t)$."
   },
   {
     "type": "Theorem 2.2.3",
     "concept": "What are the six key properties of the Fourier transform on $M(\\mathbb{T})$?",
-    "content": "The map $\\mu\\mapsto\\{\\hat{\\mu}(n)\\}$ is a continuous injective algebra homomorphism from $M(\\mathbb{T})$ into $\\ell^\\infty(\\mathbb{Z})$: (i) $\\widehat{\\mu*\\nu}(n)=\\hat{\\mu}(n)\\hat{\\nu}(n)$. (ii) $\\widehat{\\mu+\\nu}(n)=\\hat{\\mu}(n)+\\hat{\\nu}(n)$. (iii) $\\widehat{\\alpha\\mu}(n)=\\alpha\\hat{\\mu}(n)$. (iv) $\\sup_n|\\hat{\\mu}(n)|\\le\\|\\mu\\|_1$. (v) If $\\hat{\\mu}(n)=0$ for all $n$, then $\\mu=0$ (injectivity, by density of $\\Pi(\\mathbb{T})$ in $C(\\mathbb{T})$). (vi) For $f\\in L^1(\\mathbb{T})$, $(\\hat{f}(n))\\in c_0(\\mathbb{Z})$ (Riemann-Lebesgue lemma)."
+    "content": "The map $\\mu\\mapsto\\{\\hat{\\mu}(n)\\}$ is a continuous injective algebra homomorphism from $M(\\mathbb{T})$ into $\\ell^\\infty(\\mathbb{Z})$: (i) $\\widehat{\\mu\\ast\\nu}(n)=\\hat{\\mu}(n)\\hat{\\nu}(n)$. (ii) $\\widehat{\\mu+\\nu}(n)=\\hat{\\mu}(n)+\\hat{\\nu}(n)$. (iii) $\\widehat{\\alpha\\mu}(n)=\\alpha\\hat{\\mu}(n)$. (iv) $\\sup_n|\\hat{\\mu}(n)|\\le\\|\\mu\\|_1$. (v) If $\\hat{\\mu}(n)=0$ for all $n$, then $\\mu=0$ (injectivity, by density of $\\Pi(\\mathbb{T})$ in $C(\\mathbb{T})$). (vi) For $f\\in L^1(\\mathbb{T})$, $(\\hat{f}(n))\\in c_0(\\mathbb{Z})$ (Riemann-Lebesgue lemma)."
   },
   {
     "type": "Corollary 2.2.4",
@@ -87,12 +87,12 @@
   {
     "type": "Corollary 2.2.6",
     "concept": "Is $L^1(\\mathbb{T})$ a Banach algebra under convolution and does it have a unit?",
-    "content": "$L^1(\\mathbb{T})$ is a Banach algebra without unit. The convolution of two $L^1$ functions satisfies $f*g\\in L^1$ and $\\widehat{f*g}=\\hat{f}\\hat{g}$. There is no unit element since any candidate $f_0$ would need $\\hat{f_0}(n)=1$ for all $n$, contradicting the Riemann-Lebesgue lemma."
+    "content": "$L^1(\\mathbb{T})$ is a Banach algebra without unit. The convolution of two $L^1$ functions satisfies $f\\ast g\\in L^1$ and $\\widehat{f\\ast g}=\\hat{f}\\hat{g}$. There is no unit element since any candidate $f_0$ would need $\\hat{f_0}(n)=1$ for all $n$, contradicting the Riemann-Lebesgue lemma."
   },
   {
     "type": "Definition 2.3.1",
     "concept": "What is the Fourier series $S(f)$ and the $N$-th partial sum $S_N(f)$?",
-    "content": "The Fourier series of $f\\in L^1(\\mathbb{T})$ is the formal series $S(f)(t) = \\sum_{n=-\\infty}^{\\infty}\\hat{f}(n)e^{int}$. The $N$-th partial sum is $S_N(f)(t) = \\sum_{n=-N}^{N}\\hat{f}(n)e^{int} = D_N*f(t)$, where $D_N(t)=\\sum_{n=-N}^N e^{int}$ is the Dirichlet kernel."
+    "content": "The Fourier series of $f\\in L^1(\\mathbb{T})$ is the formal series $S(f)(t) = \\sum_{n=-\\infty}^{\\infty}\\hat{f}(n)e^{int}$. The $N$-th partial sum is $S_N(f)(t) = \\sum_{n=-N}^{N}\\hat{f}(n)e^{int} = D_N\\ast f(t)$, where $D_N(t)=\\sum_{n=-N}^N e^{int}$ is the Dirichlet kernel."
   },
   {
     "type": "Definition 2.3.2",
@@ -121,53 +121,53 @@
   },
   {
     "type": "Theorem 2.3.12",
-    "concept": "If $K_\\varepsilon$ is a summability kernel, does $K_\\varepsilon*f$ converge to $f$ in $C(\\mathbb{T})$ for $f\\in C(\\mathbb{T})$?",
-    "content": "Yes. For $f\\in C(\\mathbb{T})$, $K_\\varepsilon*f\\to f$ uniformly on $\\mathbb{T}$ as $\\varepsilon\\to0$. The proof splits the integral into $|s|<\\delta$ (where $f$ is nearly constant) and $|s|>\\delta$ (where $K_\\varepsilon$ has small mass)."
+    "concept": "If $K_\\varepsilon$ is a summability kernel, does $K_\\varepsilon\\ast f$ converge to $f$ in $C(\\mathbb{T})$ for $f\\in C(\\mathbb{T})$?",
+    "content": "Yes. For $f\\in C(\\mathbb{T})$, $K_\\varepsilon\\ast f\\to f$ uniformly on $\\mathbb{T}$ as $\\varepsilon\\to0$. The proof splits the integral into $|s|<\\delta$ (where $f$ is nearly constant) and $|s|>\\delta$ (where $K_\\varepsilon$ has small mass)."
   },
   {
     "type": "Theorem 2.3.13",
     "concept": "What is Young's inequality for convolution on $L^p(\\mathbb{T})$?",
-    "content": "If $f\\in L^1(\\mathbb{T})$ and $g\\in L^p(\\mathbb{T})$ for $1<p<\\infty$, then $f*g\\in L^p(\\mathbb{T})$ and $\\|f*g\\|_p \\le \\|f\\|_1\\|g\\|_p$. The proof uses Hölder's inequality: $|f*g(s)|\\le \\int|f(t)|^{1/p}|f(t)|^{1/p'}|g(s-t)|$, then Fubini's theorem."
+    "content": "If $f\\in L^1(\\mathbb{T})$ and $g\\in L^p(\\mathbb{T})$ for $1<p<\\infty$, then $f\\ast g\\in L^p(\\mathbb{T})$ and $\\|f\\ast g\\|_p \\le \\|f\\|_1\\|g\\|_p$. The proof uses Hölder's inequality: $|f\\ast g(s)|\\le \\int|f(t)|^{1/p}|f(t)|^{1/p'}|g(s-t)|$, then Fubini's theorem."
   },
   {
     "type": "Theorem 2.3.14",
-    "concept": "If $K_\\varepsilon$ is a summability kernel, does $K_\\varepsilon*f$ converge to $f$ in $L^p(\\mathbb{T})$?",
-    "content": "Yes. For $f\\in L^p(\\mathbb{T})$ ($1\\le p<\\infty$), $K_\\varepsilon*f\\to f$ in $L^p(\\mathbb{T})$ as $\\varepsilon\\to0$. Proof: approximate $f$ by $g\\in C(\\mathbb{T})$, use Theorem 2.3.12 for $g$, and apply Young's inequality to control the error."
+    "concept": "If $K_\\varepsilon$ is a summability kernel, does $K_\\varepsilon\\ast f$ converge to $f$ in $L^p(\\mathbb{T})$?",
+    "content": "Yes. For $f\\in L^p(\\mathbb{T})$ ($1\\le p<\\infty$), $K_\\varepsilon\\ast f\\to f$ in $L^p(\\mathbb{T})$ as $\\varepsilon\\to0$. Proof: approximate $f$ by $g\\in C(\\mathbb{T})$, use Theorem 2.3.12 for $g$, and apply Young's inequality to control the error."
   },
   {
     "type": "Corollary 2.3.15",
     "concept": "What are the Abel and Cesàro summability results for Fourier series of continuous/$L^p$ functions?",
-    "content": "For $f\\in C(\\mathbb{T})$ (resp. $f\\in L^p(\\mathbb{T})$): (i) Abel summability: $\\lim_{r\\to 1}P_r*f = f$ uniformly (resp. in $L^p$), i.e. $(A)\\sum\\hat{f}(n)e^{int}=f$. (ii) Cesàro summability: $\\lim_{N\\to\\infty}K_N*f = f$ uniformly (resp. in $L^p$), i.e. $(C)\\sum\\hat{f}(n)e^{int}=f$."
+    "content": "For $f\\in C(\\mathbb{T})$ (resp. $f\\in L^p(\\mathbb{T})$): (i) Abel summability: $\\lim_{r\\to 1}P_r\\ast f = f$ uniformly (resp. in $L^p$), i.e. $(A)\\sum\\hat{f}(n)e^{int}=f$. (ii) Cesàro summability: $\\lim_{N\\to\\infty}K_N\\ast f = f$ uniformly (resp. in $L^p$), i.e. $(C)\\sum\\hat{f}(n)e^{int}=f$."
   },
   {
     "type": "Nota 2.3.16",
     "concept": "What constructive proof does Corollary 2.3.15 provide?",
-    "content": "The Cesàro summability result gives a constructive proof that $\\Pi(\\mathbb{T})$ is dense in $C(\\mathbb{T})$ and in $L^p(\\mathbb{T})$ for $1\\le p<\\infty$, via $\\sigma_N(f) = K_N*f$, which is a trigonometric polynomial converging to $f$."
+    "content": "The Cesàro summability result gives a constructive proof that $\\Pi(\\mathbb{T})$ is dense in $C(\\mathbb{T})$ and in $L^p(\\mathbb{T})$ for $1\\le p<\\infty$, via $\\sigma_N(f) = K_N\\ast f$, which is a trigonometric polynomial converging to $f$."
   },
   {
     "type": "Ejercicio 2.4.1",
-    "concept": "What is $\\chi_{[0,\\pi)}*\\chi_{(-\\pi,0]}$?",
+    "concept": "What is $\\chi_{[0,\\pi)}\\ast\\chi_{(-\\pi,0]}$?",
     "content": "This exercise computes the convolution of two characteristic functions of half-circles. The result is a piecewise linear function (a triangle/trapezoid shape) supported on $(-\\pi,\\pi)$."
   },
   {
     "type": "Ejercicio 2.4.2",
-    "concept": "If $P$ and $Q$ are trigonometric polynomials, what is $P*Q$?",
-    "content": "If $P=\\sum\\alpha_k\\phi_k$ and $Q=\\sum\\beta_k\\phi_k$, then $P*Q = \\sum\\alpha_k\\beta_k\\phi_k$ (the convolution multiplies corresponding Fourier coefficients). This follows from $\\phi_n*\\phi_m = 0$ for $n\\neq m$ and $\\phi_n*\\phi_n = \\phi_n$."
+    "concept": "If $P$ and $Q$ are trigonometric polynomials, what is $P\\ast Q$?",
+    "content": "If $P=\\sum\\alpha_k\\phi_k$ and $Q=\\sum\\beta_k\\phi_k$, then $P\\ast Q = \\sum\\alpha_k\\beta_k\\phi_k$."
   },
   {
     "type": "Ejercicio 2.4.3",
-    "concept": "Is $(L^1(\\mathbb{T}),*)$ a commutative algebra and does it have a unit?",
-    "content": "$(L^1(\\mathbb{T}),*)$ is a commutative algebra (convolution is commutative and associative). It does NOT have a unit: if $e*f=f$ for all $f$, then $\\hat{e}(n)=1$ for all $n$, contradicting the Riemann-Lebesgue lemma ($\\hat{e}(n)\\not\\to 0$)."
+    "concept": "Is $(L^1(\\mathbb{T}),\\ast)$ a commutative algebra and does it have a unit?",
+    "content": "$(L^1(\\mathbb{T}),\\ast)$ is a commutative algebra. It does NOT have a unit."
   },
   {
     "type": "Ejercicio 2.4.4",
-    "concept": "If $\\mu=\\sum\\alpha_k\\delta_{a_k}$ and $f\\in C(\\mathbb{T})$, what is $\\mu*f(0)$?",
-    "content": "$\\mu*f(0) = \\sum_{k=1}^n \\alpha_k f(-a_k)$. This follows because $\\delta_a*f(0) = \\int f(0-t)\\,d\\delta_a(t) = f(-a)$."
+    "concept": "If $\\mu=\\sum\\alpha_k\\delta_{a_k}$ and $f\\in C(\\mathbb{T})$, what is $\\mu\\ast f(0)$?",
+    "content": "$\\mu\\ast f(0) = \\sum_{k=1}^n \\alpha_k f(-a_k)$."
   },
   {
     "type": "Ejercicio 2.4.5",
     "concept": "What is the convolution of two discrete measures $\\mu_1=\\sum\\alpha_k\\delta_{a_k}$ and $\\mu_2=\\sum\\beta_k\\delta_{b_k}$?",
-    "content": "$\\mu_1*\\mu_2 = \\sum_{j,k}\\alpha_j\\beta_k\\,\\delta_{a_j+b_k}$. That is, convolution of discrete measures corresponds to convolution of their atomic masses."
+    "content": "$\\mu_1\\ast\\mu_2 = \\sum_{j,k}\\alpha_j\\beta_k\\,\\delta_{a_j+b_k}$. That is, convolution of discrete measures corresponds to convolution of their atomic masses."
   },
   {
     "type": "Ejercicio 2.4.6",
@@ -182,16 +182,16 @@
   {
     "type": "Ejercicio 2.4.8",
     "concept": "How many zeros can a trigonometric polynomial of degree $N$ have on $\\mathbb{T}$?",
-    "content": "A trigonometric polynomial of degree $N$ has at most $2N$ zeros on $\\mathbb{T}$. Proof: using the substitution $z=e^{it}$, the polynomial becomes a rational function $z^{-N}\\sum a_k z^{N+k}$ whose numerator is a polynomial of degree at most $2N$."
+    "content": "A trigonometric polynomial of degree $N$ has at most $2N$ zeros on $\\mathbb{T}$."
   },
   {
     "type": "Ejercicio 2.4.9",
     "concept": "What is the De la Vallée-Poussin kernel $V_n$ and what are its approximation properties?",
-    "content": "$V_n = 2K_{2n+1} - K_n$, where $K_n$ is the Fejér kernel. (a) $V_n$ has Fourier coefficients equal to $1$ for $|k|\\le n+1$ and $0$ for $|k|> 2n+1$. (b) For $f\\in L^p(\\mathbb{T})$ ($1\\le p<\\infty$), $V_n*f\\to f$ in $L^p$. (c) The convergence does NOT hold in $L^\\infty$ norm in general."
+    "content": "$V_n = 2K_{2n+1} - K_n$, where $K_n$ is the Fejér kernel. (a) $V_n$ has Fourier coefficients equal to $1$ for $|k|\\le n+1$ and $0$ for $|k|> 2n+1$. (b) For $f\\in L^p(\\mathbb{T})$ ($1\\le p<\\infty$), $V_n\\ast f\\to f$ in $L^p$. (c) The convergence does NOT hold in $L^\\infty$ norm in general."
   },
   {
     "type": "Ejercicio 2.4.10",
     "concept": "What is the Fejér lemma (Riemann-Lebesgue generalization)?",
-    "content": "If $f\\in L^1(\\mathbb{T})$ and $g\\in L^\\infty(\\mathbb{T})$, then $\\lim_{n\\to\\infty}\\int_{-\\pi}^{\\pi}f(t)g(nt)\\frac{dt}{2\\pi} = \\hat{f}(0)\\hat{g}(0)$. This generalizes Riemann-Lebesgue ($g(t)=e^{it}$) and shows that $g(nt)$ converges weakly to its mean value."
+    "content": "If $f\\in L^1(\\mathbb{T})$ and $g\\in L^\\infty(\\mathbb{T})$, then $\\lim_{n\\to\\infty}\\int_{-\\pi}^{\\pi}f(t)g(nt)\\frac{dt}{2\\pi} = \\hat{f}(0)\\hat{g}(0)$."
   }
 ]
