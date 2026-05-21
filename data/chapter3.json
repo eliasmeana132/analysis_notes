@@ -210,41 +210,6 @@
     "content": "$h^p(\\mathbb{D}) = L^p(\\mathbb{T})$ with equal norms for $1<p\\le\\infty$. (i) If $f\\in L^p(\\mathbb{T})$ then $P(f)\\in h^p(\\mathbb{D})$ with $\\|P(f)\\|_{h^p}\\le\\|f\\|_p$. (ii) If $u\\in h^p(\\mathbb{D})$, there exists $f\\in L^p(\\mathbb{T})$ such that $u=P(f)$ and $\\|f\\|_p\\le\\|u\\|_{h^p}$."
   },
   {
-    "type": "Definition 3.7.1",
-    "concept": "How is the conjugate harmonic function $\\tilde{u}$ defined?",
-    "content": "For a real harmonic function $u:\\mathbb{D}\\to\\mathbb{R}$, its harmonic conjugate $\\tilde{u}$ is the unique real harmonic function such that $F=u+i\\tilde{u}\\in H(\\mathbb{D})$ and $\\tilde{u}(0)=0$."
-  },
-  {
-    "type": "Example 3.7.3",
-    "concept": "What is the conjugate Poisson kernel $Q(z)$ and what is its Fourier series?",
-    "content": "$Q(z)=\\operatorname{Im}(\\frac{1+z}{1-z})$ is the conjugate Poisson kernel. In polar form: $Q(re^{it})=\\frac{2r\\sin t}{1+r^2-2r\\cos t}=-i\\sum_{n=-\\infty}^{\\infty}\\operatorname{sign}(n)r^{|n|}e^{int}$."
-  },
-  {
-    "type": "Proposition 3.7.4",
-    "concept": "If $u=P(\\mu)$ is the Poisson integral of a measure, what is its harmonic conjugate?",
-    "content": "$\\tilde{u}(z)=\\int_{-\\pi}^{\\pi}Q(ze^{-it})d\\mu(t)=Q_r*\\mu(t)$ for $z=re^{it}$. This follows because $Q(0)=0$ and $P(\\mu)(z)+i\\tilde{u}(z)=\\int\\frac{e^{it}+z}{e^{it}-z}d\\mu(t)\\in H(\\mathbb{D})$."
-  },
-  {
-    "type": "Theorem 3.7.5",
-    "concept": "Does the conjugate function $\\tilde{f}$ exist almost everywhere for $f\\in L^1(\\mathbb{T})$?",
-    "content": "Yes. For $f\\in L^1_{\\mathbb{R}}(\\mathbb{T})$, the limit $\\tilde{f}(t)=\\lim_{r\\to 1}Q_r*f(t)$ exists for almost every $t$. The proof uses the fact that $e^{-(u+i\\tilde{u})}$ is bounded and analytic, hence has boundary values a.e."
-  },
-  {
-    "type": "Theorem 3.7.6",
-    "concept": "What is the weak $(1,1)$ inequality for the conjugate function?",
-    "content": "There exists $C>0$ such that $m(\\{t\\in\\mathbb{T}:|\\tilde{f}(t)|>\\lambda\\})\\le C\\frac{\\|f\\|_1}{\\lambda}$ for all $f\\in L^1(\\mathbb{T})$. The proof uses the harmonic function $H_\\lambda(w)=1+\\frac{1}{\\pi}\\operatorname{Arg}(\\frac{w-i\\lambda}{w+i\\lambda})$."
-  },
-  {
-    "type": "Theorem 3.7.7",
-    "concept": "What are the properties of the conjugate function on $L^2(\\mathbb{T})$?",
-    "content": "If $f\\in L^2_{\\mathbb{R}}(\\mathbb{T})$ then $\\tilde{f}\\in L^2_{\\mathbb{R}}(\\mathbb{T})$ with $\\widehat{\\tilde{f}}(n)=-i\\operatorname{sign}(n)\\hat{f}(n)$ for all $n\\in\\mathbb{Z}$. In particular, $\\|\\tilde{f}\\|_2=\\|f\\|_2$ (the conjugation operator is an isometry on $L^2$)."
-  },
-  {
-    "type": "Theorem 3.7.8",
-    "concept": "What is the $L^p$ boundedness of the conjugate function for $1<p<\\infty$?",
-    "content": "For $1<p<\\infty$, there exists $C_p>0$ such that $\\|\\tilde{f}\\|_p\\le C_p\\|f\\|_p$ for all $f\\in L^p(\\mathbb{T})$. For $1<p<2$ this follows from Marcinkiewicz interpolation (weak $(1,1)$ + strong $(2,2)$). For $p>2$ it follows by duality, since the conjugation operator is self-adjoint."
-  },
-  {
     "type": "Exercise 3.8.1",
     "concept": "For $p<q$ and a finite measure space $(R,\\Sigma,\\mu)$, what inclusion holds between $L^{q,\\infty}$ and $L^p$, and is it strict?",
     "content": "$L^{q,\\infty}(R,\\mu)\\subseteq L^p(R,\\mu)$. For Lebesgue measure on $[0,1]$, the inclusion is strict (e.g., $f(x)=x^{-1/q}$ is in $L^p$ but not in $L^{q,\\infty}$). For counting measure on $\\mathbb{N}$, the same relationship holds."
