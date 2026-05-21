@@ -18,7 +18,7 @@ def load_all_cards():
         with open(os.path.join(data_dir, file), "r", encoding="utf-8") as f:
             chapter_data = json.load(f)
             for card in chapter_data:
-                card["chapter"] = chapter_name   # tag each card with its chapter
+                card["chapter"] = chapter_name
                 cards.append(card)
     return cards
 
@@ -26,9 +26,21 @@ def load_all_cards():
 def get_original_cards(chapter):
     all_cards = st.session_state.all_cards
     if chapter == "All":
-        return list(all_cards)   # return a copy
+        return list(all_cards)
     else:
         return [card for card in all_cards if card["chapter"] == chapter]
+
+# ---------- Helper: filter cards by type list ----------
+def filter_cards_by_type(cards, type_list):
+    """Return cards whose 'type' field contains any of the strings in type_list.
+       If type_list is empty, return all cards."""
+    if not type_list:
+        return cards
+    filtered = []
+    for card in cards:
+        if any(t in card.get("type", "") for t in type_list):
+            filtered.append(card)
+    return filtered
 
 # ---------- Session state initialisation ----------
 if "all_cards" not in st.session_state:
@@ -43,13 +55,22 @@ if not all_cards:
 chapters_list = sorted({card["chapter"] for card in all_cards})
 chapters = ["All"] + chapters_list
 
-# Ensure selected_chapter is valid (e.g. after data changes)
+# Ensure selected_chapter is valid
 if ("selected_chapter" not in st.session_state or
     st.session_state.selected_chapter not in chapters):
     st.session_state.selected_chapter = "All"
 
+# Type filter state
+if "type_filter_list" not in st.session_state:
+    st.session_state.type_filter_list = []       # parsed strings from the text area
+if "type_filter_text" not in st.session_state:
+    st.session_state.type_filter_text = ""       # raw text area value
+
+# Initialize cards based on current chapter and type filter
 if "cards" not in st.session_state:
-    st.session_state.cards = get_original_cards(st.session_state.selected_chapter)
+    base = get_original_cards(st.session_state.selected_chapter)
+    st.session_state.cards = filter_cards_by_type(base, st.session_state.type_filter_list)
+
 if "index" not in st.session_state:
     st.session_state.index = 0
 if "show_answer" not in st.session_state:
@@ -57,7 +78,20 @@ if "show_answer" not in st.session_state:
 
 # ---------- Callbacks ----------
 def on_chapter_change():
-    st.session_state.cards = get_original_cards(st.session_state.selected_chapter)
+    base = get_original_cards(st.session_state.selected_chapter)
+    st.session_state.cards = filter_cards_by_type(base, st.session_state.type_filter_list)
+    st.session_state.index = 0
+    st.session_state.show_answer = False
+
+def apply_type_filter():
+    # Parse text from the text area
+    raw = st.session_state.type_filter_text
+    # Split by lines, strip, remove empty strings
+    new_filter = [line.strip() for line in raw.splitlines() if line.strip()]
+    st.session_state.type_filter_list = new_filter
+    # Recompute cards for the current chapter and new filter
+    base = get_original_cards(st.session_state.selected_chapter)
+    st.session_state.cards = filter_cards_by_type(base, new_filter)
     st.session_state.index = 0
     st.session_state.show_answer = False
 
@@ -77,7 +111,9 @@ def shuffle_cards():
     st.session_state.show_answer = False
 
 def reset_cards():
-    st.session_state.cards = get_original_cards(st.session_state.selected_chapter)
+    # Reset to original filtered order for the current chapter and type filter
+    base = get_original_cards(st.session_state.selected_chapter)
+    st.session_state.cards = filter_cards_by_type(base, st.session_state.type_filter_list)
     st.session_state.index = 0
     st.session_state.show_answer = False
 
@@ -92,9 +128,25 @@ st.selectbox(
     on_change=on_chapter_change
 )
 
+# Type filter area
+col_filter1, col_filter2 = st.columns([3, 1])
+with col_filter1:
+    st.text_area(
+        "Filter by type (one per line, e.g. 3.2.7)",
+        key="type_filter_text",
+        height=100,
+        help="Enter type identifiers (like 1.1.1, Proposition 2.3.4) – cards whose type contains any of these will be shown."
+    )
+with col_filter2:
+    st.button("Apply Filter", on_click=apply_type_filter, use_container_width=True)
+
+# Show applied filter status
+if st.session_state.type_filter_list:
+    st.caption(f"Active filter: {', '.join(st.session_state.type_filter_list)}")
+
 # Guard against empty selection
 if not st.session_state.cards:
-    st.warning("No cards in this chapter.")
+    st.warning("No cards match the current chapter and type filter.")
     st.stop()
 
 # Ensure index is within bounds (safety)
