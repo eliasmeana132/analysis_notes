@@ -32,13 +32,15 @@ def get_original_cards(chapter):
 
 # ---------- Helper: filter cards by type list ----------
 def filter_cards_by_type(cards, type_list):
-    """Return cards whose 'type' field contains any of the strings in type_list.
+    """Return cards whose 'type' field contains any of the EXACT tokens from type_list.
        If type_list is empty, return all cards."""
     if not type_list:
         return cards
     filtered = []
     for card in cards:
-        if any(t in card.get("type", "") for t in type_list):
+        # Split type into words (e.g., "Definition 1.2.10" → ["Definition", "1.2.10"])
+        tokens = card.get("type", "").split()
+        if any(filt in tokens for filt in type_list):
             filtered.append(card)
     return filtered
 
