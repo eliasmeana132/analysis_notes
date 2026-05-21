@@ -60,16 +60,6 @@
     "content": "If $T$ is $(p_0,q_0)$-strong with norm $\\le M_0$ and $(p_1,q_1)$-strong with norm $\\le M_1$, then $T$ is $(p,q)$-strong with $\\|T\\|_{L^p\\to L^q}\\le M_0^{1-\\theta}M_1^\\theta$ where $\\frac{1}{p}=\\frac{1-\\theta}{p_0}+\\frac{\\theta}{p_1}$ and $\\frac{1}{q}=\\frac{1-\\theta}{q_0}+\\frac{\\theta}{q_1}$, for $0<\\theta<1$."
   },
   {
-    "type": "Lemma 3.3.3",
-    "concept": "For a matrix $A=(a_{i,j})$ and $M(\\alpha,\\beta)=\\|A\\|_{\\ell^p\\to\\ell^q}$ with $(\\alpha,\\beta)=(1/p,1/q)$, what convexity property does $\\log M(\\alpha,\\beta)$ have on $\\Delta=\\{(\\alpha,\\beta)\\in[0,1]^2:\\alpha\\ge\\beta\\}$?",
-    "content": "$\\log M(\\alpha,\\beta)$ is logarithmically convex on $\\Delta$, i.e., $M(\\alpha,\\beta)\\le M(\\alpha_0,\\beta_0)^{1-\\theta}M(\\alpha_1,\\beta_1)^\\theta$ when $(\\alpha,\\beta)=(1-\\theta)(\\alpha_0,\\beta_0)+\\theta(\\alpha_1,\\beta_1)$."
-  },
-  {
-    "type": "Theorem 3.3.4",
-    "concept": "What is the Riesz convexity theorem and what additional condition does it require compared to Riesz-Thorin?",
-    "content": "If $1\\le p_0\\le q_0\\le\\infty$, $1\\le p_1\\le q_1\\le\\infty$, and $T$ is linear with $(p_0,q_0)$-strong norm $\\le M_0$ and $(p_1,q_1)$-strong norm $\\le M_1$, then $T$ is $(p,q)$-strong with $\\|T\\|_{L^p\\to L^q}\\le M_0^{1-\\theta}M_1^\\theta$. The extra condition is $p_i\\le q_i$ (i.e., $(1/p_i,1/q_i)\\in\\Delta$)."
-  },
-  {
     "type": "Lemma 3.3.5",
     "concept": "What is the three lines theorem (Hadamard)?",
     "content": "Let $\\Omega=\\{z\\in\\mathbb{C}:0<\\operatorname{Re}(z)<1\\}$. If $F\\in H(\\Omega)\\cap C(\\overline{\\Omega})$ and $M_\\theta=\\sup_{y\\in\\mathbb{R}}|F(\\theta+iy)|$, then $M_\\theta\\le M_0^{1-\\theta}M_1^\\theta$ for $0\\le\\theta\\le 1$."
